@@ -1,0 +1,29 @@
+{
+    "name": "Bun Devcontainer",
+    // "image": "oven/bun:latest", // Use the official Bun image
+    "build": {
+        "dockerfile": "dockerfile"
+    },
+    "features": {
+      "ghcr.io/devcontainers/features/git:1": {},
+      "ghcr.io/devcontainers/features/github-cli:1": {},
+      "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}},
+    // "mounts": [
+    //   "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    // ],
+    // "forwardPorts": [3000], // Optionally forward ports (e.g., for a web server)
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "dbaeumer.vscode-eslint",
+            "google.geminicodeassist",
+            "ms-azuretools.vscode-docker",
+            "oven.bun-vscode",
+            "Gruntfuggly.todo-tree",
+            "maixiaojie.git-emoji"
+        ]
+      }
+    },
+    "postCreateCommand": "bun install" // Automatically install dependencies after container creation
+  }
+  
