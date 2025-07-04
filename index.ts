@@ -13,7 +13,7 @@ function helpExit(rc: number) {
     console.log(`bun index.ts -c <command> -t <topic> -u <userid> -P <password -s <mqtt server url>
 where:
     -c (--command) <command> is the command to run - for example tail /var/logs/mylog -f
-    -t (--topic) <topic> is the topic to publish th stdout and stderr on
+    -t (--topic) <topic> is the topic to publish the stdout and stderr on
     -u (--userid) <userid> (optional) is the userid to use to authenticate with the MQTT server
     -P (--password) <password> (optional) is the password to use to authenticate with the MQTT server
     -s (--stdtopic) (optional defaults to false) when specified will add stdout or stderr to the end of the topic
@@ -38,7 +38,7 @@ async function main() {
     }
 
     if (!argv.c || typeof argv.c != 'string') {
-        logger.fatal('Command string to run is requried');
+        logger.fatal('Command string to run is required');
         helpExit(4);
     }
 
